@@ -2,9 +2,8 @@ Bye Bye Birdie
 
 
 Ebird Scraping Related -
-
-
 	Contains python scripts (multi-threaded and single threaded) used for downloading ebird data 
+	
 	Python script to verify if data for all dates is fetched.
 	Python script to combine the date wise ebird data generated to single file per year
 	Python script to upload ebird data to google cloud storage
