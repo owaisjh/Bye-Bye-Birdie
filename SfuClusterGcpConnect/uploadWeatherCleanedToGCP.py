@@ -13,7 +13,7 @@ def upload_local_directory_to_gcs(local_path, bucket, gcs_path):
            blob.upload_from_filename(local_file)
 
 
-storage_client = storage.Client.from_service_account_json('creds.json')
+storage_client = storage.Client.from_service_account_json('creds.json')  # login credentials for gcp
 bucket_name = 'big-data-1-project-storage'
 bucket = storage_client.get_bucket(bucket_name)
 

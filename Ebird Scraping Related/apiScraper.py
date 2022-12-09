@@ -4,13 +4,21 @@ import requests
 import json
 import os
 
+
+from dotenv import load_dotenv
+load_dotenv()
+import os
+token = os.environ.get("api-token")
+
+
+
 start = datetime.datetime.strptime("01-01-1960", "%d-%m-%Y")
 end = datetime.datetime.strptime("31-12-1960", "%d-%m-%Y")
 date_generated = pd.date_range(start, end)
 url = "https://api.ebird.org/v2/data/obs/CA-BC/historic/"
 
 headers = {'Content-Type' : 'application/json',
-            'X-eBirdApiToken' : 'p6otupunpquj'}
+            'X-eBirdApiToken' : token}
 
 
 for i in date_generated:

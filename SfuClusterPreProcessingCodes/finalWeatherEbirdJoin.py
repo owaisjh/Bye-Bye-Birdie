@@ -47,8 +47,9 @@ def main(input1, input2):
     ebird = spark.read.format('csv').schema(ebird_schema).load(input1)
     weather = spark.read.format('csv').schema(weather_schema).load(input2)
 
+    # ebird and weather data is transformed already on the GCP Cluster in the CombinedJoin.ipynb in the 1st cell.
 
-    start = 2011
+    start = 1959
     end = 2021 
     for yr in range(start,end+1):
         print(yr)
@@ -65,7 +66,7 @@ def main(input1, input2):
                                                 * cos(radians(join_1959["Latitude"])) * sin(join_1959["dist_longit"] / 2) ** 2
                                                 )
                                             ) * 2 * 6371).drop("dist_longit","dist_latit",
-                                                            "speciesCode","obsValid","obsReviewed",
+                                                                "obsValid","obsReviewed",
                                                             "locationPrivate","subId")
 
 
@@ -89,7 +90,7 @@ def main(input1, input2):
         join_1959= join_1959.drop('ebird_id_min','haversine_distance_kms' ) 
 
 
-        join_1959.write.save("joined-data-final/"+str(yr) +"/weather_ebird.csv", format='csv',header=True)
+        join_1959.write.save("joined-data-final/"+str(yr), format='csv',header=True)
 
 
 

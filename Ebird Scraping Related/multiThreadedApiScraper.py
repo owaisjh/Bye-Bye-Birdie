@@ -6,11 +6,17 @@ import json
 import os
 
 
+from dotenv import load_dotenv
+load_dotenv()
+import os
+token = os.environ.get("api-token")
+
+
 def req(i):
     url = "https://api.ebird.org/v2/data/obs/CA-BC/historic/"
 
     headers = {'Content-Type': 'application/json',
-               'X-eBirdApiToken': 'p6otupunpquj'}
+               'X-eBirdApiToken': token}
 
     date = i.strftime("%Y/%m/%d")
     response = requests.get(url+date, headers=headers)

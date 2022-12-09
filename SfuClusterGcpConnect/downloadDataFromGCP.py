@@ -9,7 +9,7 @@ dl_dir = '/home/oah4/project/weather.csv/'
 
 
 
-storage_client = storage.Client.from_service_account_json('creds.json')
+storage_client = storage.Client.from_service_account_json('creds.json')  # login credentials for gcp
 bucket_name = 'big-data-1-project-storage'
 bucket = storage_client.get_bucket(bucket_name)
 blobs = bucket.list_blobs(prefix)  # Get list of files

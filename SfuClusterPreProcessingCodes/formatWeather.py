@@ -43,28 +43,8 @@ def main(inputs):
     weather_filtered.write.save("weather_cleaned_1958Onwards.csv",format='csv',header=True)
 
 if __name__ == '__main__':
-    spark = SparkSession.builder.appName('weather etl').getOrCreate()
+    spark = SparkSession.builder.appName('weather etl transformation').getOrCreate()
     spark.sparkContext.setLogLevel('WARN')
     sc = spark.sparkContext
     inputs = sys.argv[1]
     main(inputs)
-#     observation_schema = types.StructType([
-#         types.StructField('station_id', types.StringType()),
-#         types.StructField('date', types.DateType()),
-#         types.StructField('observation', types.StringType()),
-#         types.StructField('value', types.IntegerType()),
-#         types.StructField('mflag', types.StringType()),
-#         types.StructField('qflag', types.StringType()),
-#         types.StructField('sflag', types.StringType()),
-#         types.StructField('obstime', types.StringType()),
-#     ])
-
-
-    #weather = spark.read.csv('gs://big-data-1-project-storage/cleaned-data/weather.csv',schema=observation_schema)
-    
-    #print(weather.select(year("date")).alias('year').distinct().show(100))
-    #print(weather.count())
-    
-#     weather_ghcn = spark.read.format('csv').schema(observation_schema)\
-#         .option("recursiveFileLookup", "true").load("gs://big-data-1-project-storage/ghcn/")
-#     print(weather_ghcn.count())
