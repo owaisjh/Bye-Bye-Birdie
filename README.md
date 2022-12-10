@@ -4,9 +4,9 @@ The fluctuating weather patterns along with the rise in temperature has brought 
 
 # Table of Contents:
 
-1. [Guide on files in repo](##Guide on files in repo)
-2. [Contributors](##Contributors)
-3. [Tasks and Future Scope](##Tasks and Future Scope)
+1. Guide on files in repo
+2. Contributors
+3. Tasks and Future Scope
 
 
 ## Guide on files in repo 
