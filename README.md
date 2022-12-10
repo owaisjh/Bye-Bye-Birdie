@@ -14,14 +14,13 @@ The fluctuating weather patterns along with the rise in temperature has brought 
 Ebird Scraping Related -
     Contains python scripts (multi-threaded and single threaded) used for downloading ebird data 
 	
-    apiScraper.py and multiThreadedApiScraper.py are responsible for downloading data
+    1) apiScraper.py and multiThreadedApiScraper.py are responsible for downloading data
     
-    verifyScrapedData.py: Python script to verify if data for all dates is fetched.
+    2) verifyScrapedData.py: Python script to verify if data for all dates is fetched.
     
-    combineEbirdOnYearYear.py: Python script to combine the date wise ebird data generated to single file per year
+    3) combineEbirdOnYearYear.py: Python script to combine the date wise ebird data generated to single file per year
     
-    upoadEbirdToGCP.py: Python script to upload ebird data to google cloud storage
-    
+    4) upoadEbirdToGCP.py: Python script to upload ebird data to google cloud storage
     
     It has a requirements.txt file which contains python depndencies required to run.
     User will need their own ebird API key which has to be stored in .env file.
