@@ -1,5 +1,7 @@
 Bye Bye Birdie 
 
+The fluctuating weather patterns along with the rise in temperature has brought about adverse changes in the natural terrains of birds present around the globe. This shortfall has particularly affected British Columbia bird sightings as well. It is reported that BC has lost around 20 percent of its habitat over the past three generations which is quite steep. In this project, we mainly aim at finding how weather has affected these sightings and which species have become endangered across British Columbia, Canada.
+
 
 Ebird Scraping Related -
 	Contains python scripts (multi-threaded and single threaded) used for downloading ebird data 
