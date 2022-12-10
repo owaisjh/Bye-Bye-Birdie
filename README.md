@@ -63,7 +63,9 @@ Analysis -
 
     1) Identifying species that moved locations.ipynb - identified bird species that moved locations likely due to change in weather conditions 
     
+    2) ebird_analysis.ipynb - Visualizations on the basis of purely ebird dataset.
 
+    3) weather_ebird_analysis.ipynb - Visualization on the joined dataset for weather and bird dataset correlating the weather conditions.
 
 ## Contributors:
 
